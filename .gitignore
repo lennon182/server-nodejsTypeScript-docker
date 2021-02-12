@@ -1,0 +1,7 @@
+# FOLDERS
+dist/
+node_modules/
+src/configs/
+
+# FILES
+.DS_Store

@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  apiFlipper:
+    container_name: apiFlipper
+    restart: always
+    build: .
+    ports:
+      - '8000:3000'
+    links:
+      - mongodb
+    volumes: '.:/app/flipper'
+  mongodb:
+    container_name: mongodb
+    image: mongo
+    restart: always
+    ports: -"27017:27017"
